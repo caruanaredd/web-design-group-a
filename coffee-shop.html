@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop</title>
+
+    <style>
+        /*
+            CSS RESET - * will target all the
+            elements inside the HTML document
+        */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+        }
+
+        header {
+            background-color: #6b4226;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #f4f4f4;
+            padding: 15px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        /*
+            Hierarchy is targeted using the
+            element names separated with spaces
+        */
+        nav a {
+            color: #6b4226;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        main {
+            padding: 20px;
+            margin: 20px;
+        }
+
+        /*
+            CLASSES are targeted using a dot (.)
+            followed by the name
+        */
+        .box {
+            border-width: 1px;
+            border-color: #ccc;
+            border-style: solid;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .highlight {
+            background-color: #fff4e6;
+            border-color: #d4b49b;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Website Header -->
+    <header>
+        <h1>Welcome to Our Coffee Shop</h1>
+    </header>
+
+    <!-- Website Navigation -->
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Menu</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <!-- Website Content -->
+    <main>
+
+        <!-- Welcome Box -->
+        <div class="box highlight">
+            <h2>Our Story</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque ad rerum consequuntur possimus dolore! Numquam explicabo possimus architecto molestias cumque minima enim dolorum eligendi autem?</p>
+        </div>
+
+        <!-- Featured Items Box -->
+        <div class="box">
+            <h2>Featured Items</h2>
+
+            <ul>
+                <li>Espresso - &euro;1.50</li>
+                <li>Latte - &euro;3.50</li>
+                <li>Capuccino - &euro;2.50</li>
+                <li>Macchiato - &euro;3.00</li>
+            </ul>
+        </div>
+
+        <!-- Location Box -->
+        <div class="box">
+            <h2>Location</h2>
+            <p>69, Good Luck Str, Mosta</p>
+        </div>
+
+    </main>
+</body>
+</html>

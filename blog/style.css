@@ -24,6 +24,9 @@ body {
     background-attachment: fixed;
 
     width: 100vw; /* viewport/window width */
+    width: auto;
+    /* quick hack to reduce scrolling */
+
     height: 100vh; /* viewport/window height */
 
     display: flex;
@@ -92,4 +95,87 @@ body {
 
     transition-duration: 10s;
     transition-timing-function: linear;
+}
+
+/******************* WEBSITE CONTAINER *******************/
+.container {
+    max-width: 1280px;
+    /* pushes all content to the middle */
+    margin: auto;
+}
+
+/******************* GRID SYSTEM *******************/
+.row {
+    display: flex;
+    /* if the content doesn't fit the line,
+        move it to the next line */
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+/* Targets class="card" inside class="row" */
+.two-columns .card {
+    width: calc((100% - 50px) / 2);
+}
+
+.three-columns .card {
+    width: calc((100% - 100px) / 3);
+}
+
+/******************* MAIN CONTENT *******************/
+.main-content {
+    margin-top: 100px;
+}
+
+.vertical-title {
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    /* changes the transformation anchor point
+        to the top left */
+    transform-origin: 0 0;
+    transform: rotate(90deg) translateY(5px);
+
+    /* disconnect the h3 from the content */
+    position: absolute;
+}
+
+/******************* FOOTER *******************/
+.website-footer {
+    background-color: #eee;
+    padding: 50px;
+}
+
+.website-footer .container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.website-footer .summary {
+    width: 33%;
+}
+
+.website-footer .footer-links {
+    list-style: none;
+
+    columns: 2;
+    gap: 50px;
+
+    margin-left: auto;
+}
+
+.website-footer .footer-item {
+    margin-bottom: 10px;
+}
+
+.website-footer .footer-link {
+    color: #000;
+    text-decoration: none;
+}
+
+.website-footer .copyright {
+    width: 100%;
+    text-align: right;
+    margin-top: 50px;
 }

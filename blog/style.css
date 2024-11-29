@@ -16,6 +16,16 @@ body {
     min-height: 200vh;
 }
 
+hr {
+    border: none;
+    /* Values: Width/Size Style Color */
+    border-bottom: 1px solid #ccc;
+
+    /* !important will not get replaced */
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
+}
+
 /******************* INTRO *******************/
 .intro {
     background-image: url(images/leaves.jpg);
@@ -113,6 +123,11 @@ body {
     margin: auto;
 }
 
+.content-narrow {
+    max-width: 640px;
+    margin: auto;
+}
+
 /******************* GRID SYSTEM *******************/
 .row {
     display: flex;
@@ -123,6 +138,10 @@ body {
 }
 
 /* Targets class="card" inside class="row" */
+.one-column .card {
+    width: 100%;
+}
+
 .two-columns .card {
     width: calc((100% - 50px) / 2);
 }
@@ -233,4 +252,35 @@ body {
     font-weight: bold;
 
     align-content: center;
+}
+
+/******************* STORY *******************/
+.story-header h1 {
+    /* twice the current font size */
+    font-size: 2em;
+    margin-bottom: 25px;
+}
+
+.story-header p {
+    font-size: 1.5em;
+    font-style: italic;
+    font-family: Cardo, Georgia, 'Times New Roman', Times, serif;
+
+    line-height: 1.2;
+}
+
+.story-header .byline {
+    margin-top: 10px;
+}
+
+/* Targets everything inside class="byline" */
+.story-header .byline * {
+    display: inline;
+    font-style: normal;
+}
+
+/* A comma can be used to add CSS to
+    multiple elements */
+.story-content p, .story-content .row {
+    margin-bottom: 50px;
 }
